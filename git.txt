@@ -1,0 +1,8 @@
+#include<iostream.h>
+int main(){
+int a[10],n,m;
+for(i=0;i<10;i++)
+   cin>>a[i];
+cout<<a[0];
+return 0;
+}

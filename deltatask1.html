@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  function countdown()
+  {
+  	var contestdate= new Date("June 24 2016 00:01:00");
+  	var thestartdate= new Date();
+  	var timedif=contestdate.getTime()-thestartdate.getTime();
+  	var sec=Math.floor(timedif/1000);
+  	sec=sec%60;
+  	var hr=Math.floor(min/60);
+  	hr=hr%60;
+  	var min=Math.floor(sec/60);
+  	min=min%60;
+  	var day=Math.floor(hr/24);
+  	document.getElementById("days").innerHTML=day;
+  	document.getElementById("hrs").innerHTML=hr;
+    document.getElementById("min").innerHTML=min;
+    document.getElementById("secs").innerHTML=sec;
+    var timer=setTimeout(countdown,1000);
+  }
+  </script>
+  <title>Delta Algos Contest </title>
+</head>
+<body>
+    <div class="container-fluid">
+    <div id="header"><img class="img-responsive" src="logodelta.png" align="left" height="100px" width="200px">
+<h2>Make Your <span id="makeover">BIG</span> Idea a <span id="makeover">REALITY </span></h2></div>
+    <div id="days">Days:</div>
+    <div id="hrs">Hrs:</div>
+    <div id="min">min:</div>
+    <div id="secs">sec:</div>
+    <script type="text/javascript">countdown();</script>
+    </div>
+	<style>
+	#header
+	{
+		color:black;
+		background-color:#ffffff;
+		position:fixed;
+		width:100%;
+		height:100px;
+		box-shadow: 10px 10px 5px grey;
+		margin-top:300px;
+    }
+    #days{
+    	color:black;
+    	background-color:red;
+    	height:30px;
+    	width:20px;
+    }
+ 	</style>
+
